@@ -4,7 +4,7 @@
 import { loadRemoteEntry } from '@angular-architects/module-federation';
 import { environment } from './environments/environment';
 let URL;
-if(environment.production) {
+if(!environment.production) {
 	URL = 'http://localhost:3000/remoteEntry.js';
   } else {
 	URL = 'https://module-federation-angular-mfe1.vercel.app/remoteEntry.js';
