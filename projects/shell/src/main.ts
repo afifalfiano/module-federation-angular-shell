@@ -2,9 +2,9 @@
 // 	.catch(err => console.error(err));
 
 import { loadRemoteEntry } from '@angular-architects/module-federation';
-import { isDevMode } from '@angular/core';
+import { environment } from './environments/environment';
 let URL;
-if(isDevMode()) {
+if(environment.production) {
 	URL = 'http://localhost:3000/remoteEntry.js';
   } else {
 	URL = 'https://module-federation-angular-mfe1.vercel.app/remoteEntry.js';

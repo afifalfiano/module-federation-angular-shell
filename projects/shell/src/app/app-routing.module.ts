@@ -3,10 +3,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { NotfoundComponent } from './notfound/notfound.component';
-import { isDevMode } from '@angular/core';
+import { environment } from '../environments/environment';
 let URL = '';
-console.log(isDevMode(), 'cek');
-if(isDevMode()) {
+if(environment.production) {
   URL = 'http://localhost:3000/remoteEntry.js';
 } else {
   URL = 'https://module-federation-angular-mfe1.vercel.app/remoteEntry.js';
