@@ -10,15 +10,19 @@ const routes: Routes = [
     component: HomeComponent,
     pathMatch: 'full'
   },
+  // {
+  //   path: 'products',
+  //   loadChildren: () =>
+  //     loadRemoteModule({
+  //       type: 'module',
+  //       remoteEntry: 'http://localhost:3000/remoteEntry.js',
+  //       exposedModule: './Module'
+  //     })
+  //     .then(m => m.ProductsModule)
+  // },
   {
     path: 'products',
-    loadChildren: () =>
-      loadRemoteModule({
-        type: 'module',
-        remoteEntry: 'http://localhost:3000/remoteEntry.js',
-        exposedModule: './Module'
-      })
-      .then(m => m.ProductsModule)
+    loadChildren: () => import('mfe1/Module').then(m => m.ProductsModule)
   },
   {
     path: '**',
