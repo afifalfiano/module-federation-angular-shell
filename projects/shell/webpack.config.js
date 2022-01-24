@@ -8,10 +8,10 @@ sharedMappings.register(
   path.join(__dirname, '../../tsconfig.json'),
   [/* mapped paths to share */]);
 
-module.exports =  (_, argv) => ({
+module.exports =  {
   output: {
     uniqueName: "shell",
-    publicPath: argv.mode === "development" ? "http://localhost:5000/" : "https://module-federation-angular-shell.vercel.app/",
+    publicPath: 'auto',
     scriptType: 'text/javascript',
     // publicPath: "auto"
   },
@@ -39,7 +39,7 @@ module.exports =  (_, argv) => ({
         
         // For hosts (please adjust)
         remotes: {
-            "mfe1": argv.mode === "development" ? "http://localhost:3000/remoteEntry.js" : "https://module-federation-angular-mfe1.vercel.app/remoteEntry.js"
+            // "mfe1": argv.mode === "development" ? "http://localhost:3000/remoteEntry.js" : "https://module-federation-angular-mfe1.vercel.app/remoteEntry.js"
             // "mfe1": "http://localhost:3000/remoteEntry.js"
 
         },
@@ -56,4 +56,4 @@ module.exports =  (_, argv) => ({
     }),
     sharedMappings.getPlugin()
   ],
-});
+};
