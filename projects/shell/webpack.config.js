@@ -11,8 +11,8 @@ sharedMappings.register(
 module.exports =  (_, argv) => ({
   output: {
     uniqueName: "shell",
-    // publicPath: argv.mode === "development" ? "http://localhost:5000" : "https://module-federation-angular-shell.vercel.app/"
-    publicPath: "auto"
+    publicPath: argv.mode === "development" ? "http://localhost:5000" : "https://module-federation-angular-shell.vercel.app/"
+    // publicPath: "auto"
   },
   optimization: {
     runtimeChunk: false
