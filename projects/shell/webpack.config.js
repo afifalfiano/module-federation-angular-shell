@@ -37,7 +37,7 @@ module.exports =  (_, argv) => ({
         
         // For hosts (please adjust)
         remotes: {
-            "mfe1": argv.mode === "development" ? "http://localhost:3000/remoteEntry.js" : "https://module-federation-angular-mfe1-p814n9nwq-afifalfiano2.vercel.app/remoteEntry.js"
+            "mfe1": argv.mode === "development" ? "http://localhost:3000/remoteEntry.js" : "https://module-federation-angular-mfe1.vercel.app/remoteEntry.js"
 
         },
 
